@@ -9,14 +9,14 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
             //previous withdraw amount
             const previousWithdrawTotal = getTotalValue('withdraw-total');
             //total withdraw amount
-            const currentWithdrawTotal = newWithdraw + previousWithdrawTotal;
-
-            previousWithdrawTotalValue.innerText = currentWithdrawTotal;
+            const withdraw = document.getElementById('withdraw-total');
+            withdraw.innerText = newWithdraw + previousWithdrawTotal;
+         
 
             //total new balance 
-            const newTotalBalance = previousTotalBalance - newWithdraw;
+            const balance = document.getElementById('balance-total');
+            balance.innerText = previousTotalBalance - newWithdraw;
 
-            previousTotalBalanceValue.innerText = newTotalBalance;
         }
         else {
             alert('You have not much money');
